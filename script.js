@@ -1,22 +1,26 @@
-
-
 function toggleForm() {
+  // الحصول على عناصر النموذج من خلال معرفاتها
   let loginForm = document.getElementById('login-form');
   let signupForm = document.getElementById('signup-form');
   let formTitle = document.getElementById('login-title');
 
+  // التحقق من حالة عرض نموذج تسجيل الدخول
   if (loginForm.style.display === 'none') {
-    loginForm.style.displat = 'block';
+    // إذا كان نموذج تسجيل الدخول مخفيًا، قم بعرضه
+    loginForm.style.display = 'block';
+    // وأخفِ نموذج التسجيل
     signupForm.style.display = 'none';
+    // وتغيير عنوان النموذج إلى "Login"
     formTitle.innerHTML = 'Login';
-  }
-  else {
+  } else {
+    // إذا كان نموذج تسجيل الدخول معروضًا، قم بإخفائه
     loginForm.style.display = 'none';
+    // وعرض نموذج التسجيل
     signupForm.style.display = 'block';
+    // وتغيير عنوان النموذج إلى "Sign Up"
     formTitle.innerHTML = 'Sign Up';
   }
 }
-
 
 
 // document.getElementById("signup-form").addEventListener("submit", function(event) {
